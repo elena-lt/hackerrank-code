@@ -6,7 +6,7 @@
             "request": "launch",
             "name": "Kotlin Launch",
             "projectRoot": "${workspaceFolder}/app",
-            "mainClass": "hackerrank/code/MinMaxSumKt",
+            "mainClass": "hackerrank/code/AppKt",
             "preLaunchTask": "build"
         }
     ]
