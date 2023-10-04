@@ -1,7 +1,5 @@
 package hackerrank.code
 
-import java.util.Scanner
-
 /**
  * Camel Case is a naming style common in many programming languages. In Java, method and variable
  * names typically start with a lowercase letter, with all subsequent words starting with a capital
@@ -37,19 +35,18 @@ import java.util.Scanner
 class CamelCase4 {
 
     fun handleCamelCase() {
-        val splitVariable = "S;V;pictureFrame"
-        val splitMethod = "S;M;plasticCup()"
-        val combineClass = "C;C;coffee machine"
-        val combineMethod = "C;M;white sheet of paper"
+        val inputs = buildList {
+            add("S;V;pictureFrame")
+            add("S;M;plasticCup()")
+            add("C;C;coffee machine")
+            add("C;M;white sheet of paper")
+        }
 
-        execute()
+        inputs.forEach(::execute)
     }
 
-    fun execute() {
+    fun execute(value: String) {
 
-        val scanner = Scanner(System.`in`)
-        val value = scanner.next()
-        val type = value.elementAt(2).toString()
         val words = value.substring(4)
 
         val result =
@@ -59,7 +56,7 @@ class CamelCase4 {
                     combine(type = value.elementAt(2).toString(), words = words)
                 }
 
-        print(result)
+        println(result)
     }
 
     private fun split(words: String): String {
